@@ -1,0 +1,10 @@
+{
+  "source": {
+    "repository": "echovisionlab/geul-postgres",
+    "source_path": "infra/postgres",
+    "image_asset_path": "infra/postgres",
+    "tracked_file_count": 3,
+    "aggregate_checksum": "49609b7b1c740db0e105d248ad25d2524e8fd3a149cdd43808fb96d243565c4e",
+    "aggregate_checksum_algorithm": "sha256 of sorted per-file sha256 lines in the form \"<sha256>  <repo-relative path>\\n\""
+  }
+}
