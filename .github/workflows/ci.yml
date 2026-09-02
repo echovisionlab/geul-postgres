@@ -47,7 +47,7 @@ jobs:
           docker run --rm \
             --volume "${PWD}:/workspace:ro" \
             --workdir /workspace \
-            ruby:3.4-alpine \
+            ruby:3.4-alpine@sha256:c5a5064d190055633011c03aa800170cc36945ff3afb5f6c915329f92d6f1e00 \
             ruby -e 'require "yaml"; ARGV.each { |file| YAML.load_file(file) }' \
             .github/workflows/ci.yml \
             .github/workflows/release.yml
