@@ -9,7 +9,7 @@ Maintainer: state303 <state303@dsub.io>
 
 ## Run
 
-Published image candidates:
+Published image tags:
 
 ```text
 registry.dsub.io/echovisionlab/geul-postgres:v<version>
