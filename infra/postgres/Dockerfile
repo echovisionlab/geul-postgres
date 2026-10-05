@@ -1,13 +1,13 @@
-FROM postgres:18.6-trixie@sha256:06cad38a5d9f5d24b4d83d86def30795d5e4b757fedbf5281172b576dedcd941
+FROM postgres:18.6-trixie@sha256:5a5a84b19854a9ffaa54082c166ff4ec27473a361e496e5ea167f298f2da9722
 
 ARG POSTGRESQL_PACKAGE_VERSION=18.6-1.pgdg13+2
 ARG POSTGIS_PACKAGE_VERSION=3.6.4+dfsg-2.pgdg13+1
-ARG PGROONGA_PACKAGE_VERSION=4.0.8-1
+ARG PGROONGA_PACKAGE_VERSION=4.0.9-1
 ARG IP4R_VERSION=2.4.3
-ARG PGMQ_VERSION=1.12.0
+ARG PGMQ_VERSION=1.13.0
 
 LABEL org.opencontainers.image.title="geul-postgres" \
-      description="PostgreSQL 18.6 + PostGIS 3.6.4 + PGroonga 4.0.8 + ip4r 2.4.3 + PGMQ 1.12.0"
+      description="PostgreSQL 18.6 + PostGIS 3.6.4 + PGroonga 4.0.9 + ip4r 2.4.3 + PGMQ 1.13.0"
 
 # The official PostgreSQL base supplies both linux/amd64 and linux/arm64.
 # PostGIS is installed from PGDG because postgis/postgis does not publish arm64.
@@ -29,7 +29,7 @@ RUN curl -fsSL https://packages.groonga.org/debian/groonga-apt-source-latest-tri
     rm -rf /var/lib/apt/lists/*
 
 ENV PG_VERSION=18.6-1.pgdg13+2
-ENV PGROONGA_VERSION=4.0.8
+ENV PGROONGA_VERSION=4.0.9
 ENV IP4R_VERSION=${IP4R_VERSION}
 ENV PGMQ_VERSION=${PGMQ_VERSION}
 

@@ -2,8 +2,8 @@
 
 Public source repository for the Geul PostgreSQL image.
 
-The image packages PostgreSQL 18.6, PostGIS 3.6.4, PGroonga 4.0.8, ip4r 2.4.3,
-PGMQ 1.12.0, and the initialization scripts under `infra/postgres/init`.
+The image packages PostgreSQL 18.6, PostGIS 3.6.4, PGroonga 4.0.9, ip4r 2.4.3,
+PGMQ 1.13.0, and the initialization scripts under `infra/postgres/init`.
 
 Maintainer: state303 <state303@dsub.io>
 
