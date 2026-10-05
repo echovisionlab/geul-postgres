@@ -162,8 +162,8 @@ assert_postgres_assets() {
       -c "SELECT current_setting('server_version_num') || ',' || postgis_lib_version() || ',' || (SELECT extversion FROM pg_extension WHERE extname = 'pgroonga') || ',' || (SELECT extversion FROM pg_extension WHERE extname = 'pgmq');"
   )"
 
-  if [ "${actual_versions}" != "180006,3.6.4,4.0.8,1.12.0" ]; then
-    echo "Unexpected runtime versions: got '${actual_versions}', expected '180006,3.6.4,4.0.8,1.12.0'" >&2
+  if [ "${actual_versions}" != "180006,3.6.4,4.0.9,1.13.0" ]; then
+    echo "Unexpected runtime versions: got '${actual_versions}', expected '180006,3.6.4,4.0.9,1.13.0'" >&2
     exit 1
   fi
 
@@ -171,7 +171,7 @@ assert_postgres_assets() {
     test "${PG_VERSION}" = "18.6-1.pgdg13+2"
     test "${IP4R_VERSION}" = "2.4.3"
     test "$(dpkg-query --showformat="\${Version}" --show postgresql-18-postgis-3)" = "3.6.4+dfsg-2.pgdg13+1"
-    test "$(dpkg-query --showformat="\${Version}" --show postgresql-18-pgdg-pgroonga)" = "4.0.8-1"
+    test "$(dpkg-query --showformat="\${Version}" --show postgresql-18-pgdg-pgroonga)" = "4.0.9-1"
   '
 
   docker exec "${POSTGRES_CONTAINER}" psql -U "${POSTGRES_USER}" -d "${POSTGRES_APP_DB}" -v ON_ERROR_STOP=1 \
